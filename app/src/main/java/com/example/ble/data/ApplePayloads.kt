@@ -1,0 +1,198 @@
+package com.example.ble.data
+
+private fun hex(vararg bytes: Int): ByteArray = ByteArray(bytes.size) { bytes[it].toByte() }
+
+val APPLE_PAYLOADS: List<BlePayload> = listOf(
+    BlePayload(
+        id = "apple_airpods",
+        name = "AirPods",
+        category = PayloadCategory.APPLE,
+        manufacturerData = ManufacturerData(
+            companyId = 0x004C,
+            data = hex(0x07, 0x19, 0x01, 0x02, 0x20, 0x00, 0x00, 0x45, 0x12, 0x12,
+                0x00, 0x00, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00)
+        )
+    ),
+    BlePayload(
+        id = "apple_airpods_pro",
+        name = "AirPods Pro",
+        category = PayloadCategory.APPLE,
+        manufacturerData = ManufacturerData(
+            companyId = 0x004C,
+            data = hex(0x07, 0x19, 0x01, 0x0E, 0x20, 0x00, 0x00, 0x45, 0x12, 0x12,
+                0x00, 0x00, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00)
+        )
+    ),
+    BlePayload(
+        id = "apple_airpods_max",
+        name = "AirPods Max",
+        category = PayloadCategory.APPLE,
+        manufacturerData = ManufacturerData(
+            companyId = 0x004C,
+            data = hex(0x07, 0x19, 0x01, 0x0A, 0x20, 0x00, 0x00, 0x45, 0x12, 0x12,
+                0x00, 0x00, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00)
+        )
+    ),
+    BlePayload(
+        id = "apple_airtag",
+        name = "AirTag",
+        category = PayloadCategory.APPLE,
+        manufacturerData = ManufacturerData(
+            companyId = 0x004C,
+            data = hex(0x12, 0x05, 0x00, 0x00, 0x00, 0x00)
+        )
+    ),
+    BlePayload(
+        id = "apple_tv_setup",
+        name = "Apple TV (Setup)",
+        category = PayloadCategory.APPLE,
+        manufacturerData = ManufacturerData(
+            companyId = 0x004C,
+            data = hex(0x0B, 0x09, 0x00, 0x01, 0x09, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00)
+        )
+    ),
+    BlePayload(
+        id = "apple_tv_new_user",
+        name = "Apple TV (New User)",
+        category = PayloadCategory.APPLE,
+        manufacturerData = ManufacturerData(
+            companyId = 0x004C,
+            data = hex(0x0B, 0x09, 0x00, 0x02, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00)
+        )
+    ),
+    BlePayload(
+        id = "apple_tv_apple_id",
+        name = "Apple TV (Apple ID)",
+        category = PayloadCategory.APPLE,
+        manufacturerData = ManufacturerData(
+            companyId = 0x004C,
+            data = hex(0x0B, 0x09, 0x00, 0x03, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00)
+        )
+    ),
+    BlePayload(
+        id = "apple_tv_wireless_audio",
+        name = "Apple TV (Wireless Audio Sync)",
+        category = PayloadCategory.APPLE,
+        manufacturerData = ManufacturerData(
+            companyId = 0x004C,
+            data = hex(0x0B, 0x09, 0x00, 0x04, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00)
+        )
+    ),
+    BlePayload(
+        id = "apple_tv_homekit",
+        name = "Apple TV (HomeKit)",
+        category = PayloadCategory.APPLE,
+        manufacturerData = ManufacturerData(
+            companyId = 0x004C,
+            data = hex(0x0B, 0x09, 0x00, 0x08, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00)
+        )
+    ),
+    BlePayload(
+        id = "apple_tv_keyboard",
+        name = "Apple TV (Keyboard)",
+        category = PayloadCategory.APPLE,
+        manufacturerData = ManufacturerData(
+            companyId = 0x004C,
+            data = hex(0x0B, 0x09, 0x01, 0x07, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00)
+        )
+    ),
+    BlePayload(
+        id = "apple_tv_privacy",
+        name = "Apple TV (Privacy Reminder)",
+        category = PayloadCategory.APPLE,
+        manufacturerData = ManufacturerData(
+            companyId = 0x004C,
+            data = hex(0x0B, 0x09, 0x00, 0x0B, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00)
+        )
+    ),
+    BlePayload(
+        id = "apple_beats_flex",
+        name = "Beats Flex",
+        category = PayloadCategory.APPLE,
+        manufacturerData = ManufacturerData(
+            companyId = 0x004C,
+            data = hex(0x07, 0x19, 0x01, 0x10, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00)
+        )
+    ),
+    BlePayload(
+        id = "apple_beats_solo3",
+        name = "Beats Solo 3",
+        category = PayloadCategory.APPLE,
+        manufacturerData = ManufacturerData(
+            companyId = 0x004C,
+            data = hex(0x07, 0x19, 0x01, 0x06, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00)
+        )
+    ),
+    BlePayload(
+        id = "apple_beats_studio3",
+        name = "Beats Studio 3",
+        category = PayloadCategory.APPLE,
+        manufacturerData = ManufacturerData(
+            companyId = 0x004C,
+            data = hex(0x07, 0x19, 0x01, 0x09, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00)
+        )
+    ),
+    BlePayload(
+        id = "apple_powerbeats_pro",
+        name = "Powerbeats Pro",
+        category = PayloadCategory.APPLE,
+        manufacturerData = ManufacturerData(
+            companyId = 0x004C,
+            data = hex(0x07, 0x19, 0x01, 0x0B, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00)
+        )
+    ),
+    BlePayload(
+        id = "apple_beats_headphones",
+        name = "Beats Headphones",
+        category = PayloadCategory.APPLE,
+        manufacturerData = ManufacturerData(
+            companyId = 0x004C,
+            data = hex(0x07, 0x19, 0x01, 0x0C, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00)
+        )
+    ),
+    BlePayload(
+        id = "apple_tv_color_balance",
+        name = "TV Color Balance",
+        category = PayloadCategory.APPLE,
+        manufacturerData = ManufacturerData(
+            companyId = 0x004C,
+            data = hex(0x27, 0x09, 0x01, 0x00, 0xEE, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00)
+        )
+    ),
+    BlePayload(
+        id = "apple_airpods_case",
+        name = "AirPods Case",
+        category = PayloadCategory.APPLE,
+        manufacturerData = ManufacturerData(
+            companyId = 0x004C,
+            data = hex(0x07, 0x19, 0x01, 0x02, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00)
+        )
+    ),
+    BlePayload(
+        id = "apple_new_device",
+        name = "New Device",
+        category = PayloadCategory.APPLE,
+        manufacturerData = ManufacturerData(
+            companyId = 0x004C,
+            data = hex(0x09, 0x01, 0x00, 0x00, 0x00, 0x00)
+        )
+    ),
+    BlePayload(
+        id = "apple_iphone_migration",
+        name = "iPhone Migration",
+        category = PayloadCategory.APPLE,
+        manufacturerData = ManufacturerData(
+            companyId = 0x004C,
+            data = hex(0x09, 0x06, 0x00, 0x00, 0x00, 0x00)
+        )
+    ),
+)
